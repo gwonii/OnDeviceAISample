@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+    @State private var selectedTab = 0
 
-#Preview {
-    ContentView()
+    var body: some View {
+        TabView(selection: $selectedTab) {
+            WritingToolsView()
+                .tabItem {
+                    Text("WT ✏️")
+                }
+                .tag(0)
+
+            TodoListView()
+                .tabItem {
+                    Text("SWAI ✅")
+                }
+                .tag(1)
+        }
+        .tabViewStyle(.automatic)
+    }
 }
