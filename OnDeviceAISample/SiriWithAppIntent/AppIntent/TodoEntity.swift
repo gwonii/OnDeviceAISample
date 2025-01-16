@@ -27,16 +27,3 @@ struct TodoQuery: EntityQuery {
         TodoListViewModel.shared.todoItems.filter { $0.isCompleted == false }
     }
 }
-
-//extension MovieRating: AppEnum {
-//    // 2.
-//    static var typeDisplayRepresentation: TypeDisplayRepresentation = "Film Rating"
-//
-//    // 3.
-//    static var caseDisplayRepresentations: [MovieRating: DisplayRepresentation] = [
-//        .toWatch: "To watch",
-//        .bad: "Bad",
-//        .good: "Good",
-//        .incredible: "Incredible 💫",
-//    ]
-//}

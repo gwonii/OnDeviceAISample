@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AppIntents
 
 struct TodoItem: Identifiable, Codable, Sendable {
     enum Category: String, Codable, CaseIterable {
@@ -19,6 +20,7 @@ struct TodoItem: Identifiable, Codable, Sendable {
     var createdAt: Date = Date()
     var category: Category = Category.allCases.randomElement()!
     var isCompleted: Bool = false
+    var isFiltered: Bool = false
 
     var createdAt_yyyyMMdd: String {
         let formatter = DateFormatter()

@@ -12,9 +12,9 @@ class TodoListViewModel: ObservableObject {
     static let shared: TodoListViewModel = TodoListViewModel()
 
     var todoItems: [TodoItem] = [
-        TodoItem(title: "일기쓰기"),
-        TodoItem(title: "운동하기"),
-        TodoItem(title: "빨래하기")
+        TodoItem(title: "write a diary", isCompleted: true),
+        TodoItem(title: "do exercise"),
+        TodoItem(title: "do laundry")
     ]
 
     func addTodoItem(title: String) {
